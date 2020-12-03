@@ -16,13 +16,18 @@
 - There is a "Add Task" button, will show a form to add new task
 - There are 3 fields: title, description ans image
 - Able to input text and image for task.
-- A "Remove button" is visible when an images selected to remove image
-- There is a "Cancle" button and "Ok" button for submiting data.
+- There is a "Cancel" button and "Ok" button for submiting data.
 
 2. Edit/Delete task
 - Double click a task to edit information of task.
 - There is a "Delete" button to delete task
 - Tasks can be able to drag and drop from a list to another.
+
+3. Upload image
+- A "Remove button" is visible when an images selected to remove image.
+- There is a validation of file type and image size.
+- This app just accepts file with PNG or JPG type.
+- An image selected will be converted to Base64 string and this string will be stored as image url.
 
 ## Design
 
