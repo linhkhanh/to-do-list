@@ -1,27 +1,40 @@
-# AngToDoList
+# Set up
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+- Run `npm install` to install all dependencies
+ 
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Development server
+- This app is using Firebase and FireStore for backend and storing data.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Deployed to Firebase, link app: `https://to-do-list-b.web.app/`
 
-## Code scaffolding
+- Run `firebase deploy` to deploy app to Firebase
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Functionality
 
-## Build
+1. Add new task
+- There is a "Add Task" button, will show a form to add new task
+- There are 3 fields: title, description ans image
+- Able to input text and image for task.
+- A "Remove button" is visible when an images selected to remove image
+- There is a "Cancle" button and "Ok" button for summiting data.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Edit/Delete task
+- Double click a task to edit information of task.
+- There is a "Delete" button to delete task
+- Tasks can be able to drag and drop from a list to another.
 
-## Running unit tests
+## Design
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- There are 3 collections: todo, inProgress and done.
+- Data design:
+```
+interface Task {
+    id?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+}
+```
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

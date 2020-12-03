@@ -1,0 +1,32 @@
+mat-toolbar {
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: teal;
+    color: white;
+  }
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 2%;
+}
+
+.logo-app {
+    padding-top: 2%;
+}
+
+.app-name {
+    margin-left: 2%;
+  }
+
+.add {
+    background-color: lavender;
+    color: black;
+}
+
+.add:hover {
+    background-color: #40c4ff;
+    color: white;
+}

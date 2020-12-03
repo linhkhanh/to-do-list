@@ -1,0 +1,59 @@
+<div class="task-dialog">
+    <h1>New task </h1>
+    <!-- title -->
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="data.task.title" />
+    </mat-form-field>
+
+    <!-- description -->
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="data.task.description"></textarea>
+    </mat-form-field>
+
+    <!-- upload image -->
+    <form>
+        <div class="form-group">
+            <fieldset class="form-group">
+
+                <label>Upload Image</label>
+                {{imageError}}
+                <!-- Remove button -->
+                <button class="btn btn-outline-info remove" (click)="removeImage()" *ngIf="isImageSaved || data.task.image"><mat-icon>delete_forever</mat-icon></button>
+                
+                <!-- Form upload Image -->
+                <div class="custom-file fileInputProfileWrap">
+                    <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                    <div class="img-space">
+
+                        <ng-container *ngIf="isImageSaved; else elseTemplate">
+                            <img [src]="imageURL" />
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                            <img style="width: 100%;" [src]="templateImage" class="img-responsive">
+                        </ng-template>
+                    </div>
+                </div>
+                <!-- end form -->
+            </fieldset>
+        </div>
+
+    </form>
+    <!-- End upload image -->
+
+    
+    <div class="buttons" mat-dialog-actions>
+
+        <!-- delete button -- only visible when users edit task -->
+        <button *ngIf="data.enableDelete" class="btn btn-outline-danger" 
+            [mat-dialog-close]="{ task: data.task, delete: true }">
+            <mat-icon>delete</mat-icon>
+        </button>
+
+        <!-- Submit/Cancel button -->
+        <button class="btn btn-outline-warning" (click)="cancel()">Cancel</button>
+        <button class="btn btn-outline-success" [mat-dialog-close]="{ task: data.task }">OK</button>  
+    </div>
+
+</div>

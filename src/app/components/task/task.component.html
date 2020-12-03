@@ -1,0 +1,5 @@
+<mat-card class="item" (dblclick)="edit.emit(task)">
+    <h2>{{task.title}}</h2>
+    <p>{{task.description}}</p>
+    <img *ngIf="task.image" [src]="task.image" width="100%">
+</mat-card>
