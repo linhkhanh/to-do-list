@@ -6,7 +6,7 @@
 
 - This app is using Firebase and FireStore for backend and storing data.
 
-- Deployed to Firebase, link app: [app page](https://to-do-list-b.web.app/)
+- Deployed to Firebase, link app: [https://to-do-list-b.web.app/](https://to-do-list-b.web.app/)
 
 - Run `firebase deploy` to deploy app to Firebase
 
