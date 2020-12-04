@@ -14,7 +14,7 @@
 
 1. Add new task
 - There is a "Add Task" button, will show a form to add new task
-- There are 3 fields: title, description ans image
+- There are 3 fields: title, description and image
 - Able to input text and image for task.
 - There is a "Cancel" button and "Ok" button for submiting data.
 
