@@ -24,7 +24,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.todo = this.taskService.getData().todo;
     this.inProgress = this.taskService.getData().inProgress;
-    this.done = this.taskService.getData().done;  
+    this.done = this.taskService.getData().done; 
+    console.log(this.todo); 
   }
 
   editTask(list: 'done' | 'todo' | 'inProgress', task: Task): void {
